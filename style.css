@@ -1,4 +1,37 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background: #000000;
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    margin: 1em;
+    padding: 1em;
+    background: #ffff;
+    border-radius: 2em;
+}
 
+h1 {
+    color: #616A6B;
+    font-size: 6vw;
+}
+
+form {
+    position: relative;
+}
+
+form label {
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+button {
+    position: absolute;
+    bottom: -10px;
+    margin-left: 5em;
+}
+
+p {
+    position: relative;
+    bottom: -15px;
+}
