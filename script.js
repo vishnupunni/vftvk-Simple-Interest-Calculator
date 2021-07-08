@@ -30,7 +30,7 @@ function simpleInterset() {
 
         let interestRateShow = parseFloat(document.getElementById("rate").value);
         interestRate = interestRateShow / 100;
-        let termOfLoan = parseFloat(document.getElementById("yearterm").value);
+        let termOfLoan = document.getElementById("yearterm").value;
 
         let simleInt = principal * interestRate * termOfLoan;
         /*  end interest calculation */
