@@ -22,16 +22,33 @@ form {
 
 form label {
     padding-left: 4em;
-    padding-right: 4em;
+    padding-right: 4em
+}
+
+form label[for="intrest"] {
+    padding-right: 2.2em;
+}
+
+form label[for="years"] {
+    margin-right: -px;
 }
 
 button {
     position: absolute;
     bottom: -10px;
+    margin-top: 5px;
     margin-left: 5em;
 }
 
-p {
+#copy {
     position: relative;
     bottom: -15px;
+}
+
+#totalInt {
+    margin-top: 2em;
+}
+
+div #totalInt p {
+    margin-left: 4em;
 }
