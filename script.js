@@ -6,11 +6,6 @@ slider.oninput = function() {
     outputRange.innerHTML = this.value;
 }
 
-let amt = 0;
-let interestRateShow = 0;
-let termOfLoan = 0;
-let principal = parseFloat(document.getElementById("principal").value);
-
 
 /* VALIIDATION */
 
@@ -45,7 +40,7 @@ function simpleInterset() {
         /* massage */
         document.getElementById("siOutput-1").innerHTML = "If you deposit " + "<mark>" + principal + "</mark>,";
 
-        document.getElementById("siOutput-2").innerHTML = "at an interst rate of  " + "<mark>" + interestRateShow + "</mark>,";
+        document.getElementById("siOutput-2").innerHTML = "at an interst rate of  " + "<mark>" + interestRateShow + "%</mark>,";
 
         document.getElementById("siOutput-3").innerHTML = "you will recive an amount of " + "<mark>" + simleInt + "</mark>,";
 
