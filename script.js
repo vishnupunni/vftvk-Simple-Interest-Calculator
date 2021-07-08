@@ -33,11 +33,15 @@ function simpleInterset() {
 
 
     /* massage */
-    document.getElementById("siOutput-1").innerHTML = "If you deposit " + amt;
+    document.getElementById("siOutput-1").textContent = "If you deposit";
+    document.getElementById("siOutput-11").innerHTML = amt + ",";
 
-    document.getElementById("siOutput-2").innerHTML = "at an interst rate of " + interestRateShow;
-    document.getElementById("siOutput-3").innerHTML = "you will recive an amount of " + simleInt;
-    document.getElementById("siOutput-4").innerHTML = "in the year " + inYear;
+    document.getElementById("siOutput-2").innerHTML = "at an interst rate of  ";
+    document.getElementById("siOutput-21").innerHTML = interestRateShow + "%.";
+    document.getElementById("siOutput-3").innerHTML = "you will recive an amount of ";
+    document.getElementById("siOutput-31").innerHTML = simleInt + ",";
+    document.getElementById("siOutput-4").innerHTML = "in the year ";
+    document.getElementById("siOutput-41").innerHTML = inYear;
 
     /* end massage */
 }
