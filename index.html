@@ -7,21 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Web App – Simple Interest Calculator</title>
 </head>
 
 <body>
     <div class="container">
         <h1>Simple Interest Calculator</h1>
-        <form>
-            <label for="amount">Amount</label>
-            <input id="principal" type="number"><br><br>
-            <label for="intrest">Interest Rate</label>
-            <input type="range" step="0.25" min="1" max="20" id="rate">
-            <span id="rate_val"></span><span>%</span>
-            <br><br>
-            <label for="years">No. of Years</label>
-            <select id="yearterm">
+        <div id="simpleInt">
+            <form>
+                <label for="amount">Amount</label>
+                <input id="principal" type="number"><br><br>
+                <label for="intrest">Interest Rate</label>
+                <input type="range" step="0.25" min="1" max="20" id="rate">
+                <span id="rate_val"></span><span>%</span>
+                <br><br>
+                <label for="years">No. of Years</label>
+                <select id="yearterm">
                 <option disabled selected value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -33,20 +34,24 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
             </select>
-            <br><br>
-            <button type="submit" id="submit">Compute Interest</button>
+                <br><br>
+                <button type="submit" id="submit">Compute Interest</button>
 
-        </form>
-        <!--calculator end-->
-        <div id="totalInt">
+            </form>
+            <!--calculator end-->
+            <div id="totalInt">
+                <span id="siOutput-1"></span><br>
 
-            <p id="siOutput-1"></p>
-            <p id="siOutput-2"></p>
-            <p id="siOutput-3"></p>
-            <p id="siOutput-4"></p>
+                <span id="siOutput-2"></span><br>
 
+                <span id="siOutput-3"></span><br>
+
+                <span id="siOutput-4"></span><br>
+
+
+
+            </div>
         </div>
-        <!--totalInt end-->
 
 
         <footer>

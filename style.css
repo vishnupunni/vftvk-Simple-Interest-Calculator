@@ -18,6 +18,10 @@ h1 {
     font-size: 6vw;
 }
 
+#simpleInt {
+    margin-left: 4em;
+}
+
 form {
     position: relative;
 }
