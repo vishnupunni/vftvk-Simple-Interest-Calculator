@@ -1,5 +1,5 @@
-let slider = document.getElementById("myrange");
-let outputRange = document.getElementById("demo");
+let slider = document.getElementById("rate");
+let outputRange = document.getElementById("rate_val");
 outputRange.innerHTML = slider.value;
 
 slider.oninput = function() {
@@ -9,39 +9,51 @@ slider.oninput = function() {
 let amt = 0;
 let interestRateShow = 0;
 let termOfLoan = 0;
+let principal = parseFloat(document.getElementById("principal").value);
+
+
+/* VALIIDATION */
+
 
 document.getElementById("submit").addEventListener("click", simpleInterset);
 
 function simpleInterset() {
     event.preventDefault();
+    let principal = document.getElementById("principal").value;
 
-    /*  interest calculation */
-    let amt = parseFloat(document.getElementById("amount").value);
-    let interestRateShow = parseFloat(document.getElementById("myrange").value);
-    interestRate = interestRateShow / 100;
-    let termOfLoan = parseFloat(document.getElementById("yearterm").value);
+    if (principal == 0 || principal < 0) {
+        window.alert("Enter a positive number");
+        document.getElementById("principal").focus();
+    } else {
 
-    let simleInt = amt * interestRate * termOfLoan;
-    /*  end interest calculation */
+        /*  interest calculation */
 
-    /* year calculation */
+        let interestRateShow = parseFloat(document.getElementById("rate").value);
+        interestRate = interestRateShow / 100;
+        let termOfLoan = parseFloat(document.getElementById("yearterm").value);
 
-    let inYear = new Date().getFullYear();
-    inYear += termOfLoan
+        let simleInt = principal * interestRate * termOfLoan;
+        /*  end interest calculation */
 
-    /* end year calculation */
+        /* year calculation */
+
+        let inYear = new Date().getFullYear();
+        inYear += termOfLoan
+
+        /* end year calculation */
+
+        /* massage */
+        document.getElementById("siOutput-1").innerHTML = "If you deposit " + "<mark>" + principal + "</mark>,";
+
+        document.getElementById("siOutput-2").innerHTML = "at an interst rate of  " + "<mark>" + interestRateShow + "</mark>,";
+
+        document.getElementById("siOutput-3").innerHTML = "you will recive an amount of " + "<mark>" + simleInt + "</mark>,";
+
+        document.getElementById("siOutput-4").innerHTML = "in the year " + "<mark>" + inYear + "</mark>,";
 
 
-    /* massage */
-    document.getElementById("siOutput-1").textContent = "If you deposit";
-    document.getElementById("siOutput-11").innerHTML = amt + ",";
+        /* end massage */
 
-    document.getElementById("siOutput-2").innerHTML = "at an interst rate of  ";
-    document.getElementById("siOutput-21").innerHTML = interestRateShow + "%.";
-    document.getElementById("siOutput-3").innerHTML = "you will recive an amount of ";
-    document.getElementById("siOutput-31").innerHTML = simleInt + ",";
-    document.getElementById("siOutput-4").innerHTML = "in the year ";
-    document.getElementById("siOutput-41").innerHTML = inYear;
 
-    /* end massage */
+    }
 }

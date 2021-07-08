@@ -15,10 +15,10 @@
         <h1>Simple Interest Calculator</h1>
         <form>
             <label for="amount">Amount</label>
-            <input id="amount" type="number"><br><br>
+            <input id="principal" type="number"><br><br>
             <label for="intrest">Interest Rate</label>
-            <input type="range" step="0.1" min="0.1" max="50" id="myrange">
-            <span id="demo"></span><span>%</span>
+            <input type="range" step="0.25" min="1" max="20" id="rate">
+            <span id="rate_val"></span><span>%</span>
             <br><br>
             <label for="years">No. of Years</label>
             <select id="yearterm">
@@ -28,10 +28,10 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
-                <option value="6">7</option>
-                <option value="6">8</option>
-                <option value="6">9</option>
-                <option value="6">10</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
             </select>
             <br><br>
             <button type="submit" id="submit">Compute Interest</button>
@@ -39,23 +39,19 @@
         </form>
         <!--calculator end-->
         <div id="totalInt">
-            <span id="siOutput-1"></span>
-            <span id="siOutput-11"></span><br>
-            <span id="siOutput-2"></span>
-            <span id="siOutput-21"></span><br>
-            <span id="siOutput-3"></span>
-            <span id="siOutput-31"></span><br>
-            <span id="siOutput-4"></span>
-            <span id="siOutput-41"></span>
-            <!-- <p id="siOutput-1"></p>
+
+            <p id="siOutput-1"></p>
             <p id="siOutput-2"></p>
             <p id="siOutput-3"></p>
-            <p id="siOutput-4"></p> -->
+            <p id="siOutput-4"></p>
 
         </div>
         <!--totalTip end-->
 
-        <p id="copy">&copy; Everyone Can Get Rich</p>
+
+        <footer>
+            <p id="copy">&copy; Everyone Can Get Rich</p>
+        </footer>
 
     </div>
 
